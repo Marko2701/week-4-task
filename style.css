@@ -1,0 +1,302 @@
+:root {
+    --green: #54e6af;
+    --green-light: #B3FFE2;
+    --red: #fb3e3e;
+    --black: #121725;
+    --dark-gray: #2c344b;
+    --medium-gray: #5a668a;
+    --light-gray: #c2cbe5;
+    --white: #ffffff;
+  }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+}
+
+body {
+  background-color: var(--black);
+  font-family: "Chivo", sans-serif;
+  font-size: 18px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(assets/mobile/image-host.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  height: 100vh;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: var(--black);
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.logo {
+  width: 134px;
+  height: 56px;
+  margin: 60px 0;
+  z-index: 2;
+}
+
+.main {
+  padding: 0 20px;
+  z-index: 2;
+}
+
+.main__text-wrapper {
+  text-align: center;
+}
+
+.main__title {
+  max-width: 327px;
+  margin: 0 auto;
+  font-size: 26px;
+  line-height: 38px;
+  color: var(--green);
+}
+
+.main__title--white {
+  color: var(--white);
+}
+
+.main__text {
+  max-width: 327px;
+  margin: 30px auto 40px auto;
+  line-height: 25px;
+  font-size: 15px;
+  color: var(--light-gray);
+}
+
+.main__podcast-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.main__podcast-link {
+  display: flex;
+  align-items: center;
+}
+
+.main__podcast-icon {
+  filter: invert(42%) sepia(22%) saturate(1080%) hue-rotate(187deg) brightness(89%) contrast(86%);
+  height: 17px;
+}
+
+.main__podcast-icon--google {
+  height: 11px;
+}
+
+.main__podcast-icon--pocket {
+  height: 15px;
+}
+
+.main__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.main__input {
+  height: 46px;
+  background-color: var(--dark-gray);
+  border: none;
+  border-radius: 28px;
+  font-family: "Chivo", sans-serif;
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 400;
+  color: white;
+  text-indent: 30px;
+  outline: none;
+}
+
+.main__input::placeholder {
+  color: white;
+  opacity: 0.5;
+}
+
+.main__input-msg {
+  display: none;
+}
+
+.main__input-msg--active {
+  display: block;
+  color: var(--red);
+  padding-top: 10px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.main__button {
+  height: 46px;
+  background-color: var(--green);
+  border: none;
+  outline: none;
+  border-radius: 28px;
+  font-family: "Chivo", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 28px;
+  color: var(--black);
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.main__button:hover {
+  background-color: var(--green-light);
+}
+
+.pattern {
+  display: none;
+}
+
+
+@media all and (min-width: 768px) {
+  .container {
+    align-items: flex-start;
+    background-image: url(assets/tablet/image-host.jpg);
+    background-size: 66% 767px;
+    background-position: top right; 
+  }
+
+  .container::after {
+    display: none;
+  }
+
+  .logo {
+    margin: 40px 0 160px 30px;
+  }
+
+  .main {
+   background-color: var(--black);
+   padding: 0;
+   padding-left: 30px;
+  }
+
+  .main__text-wrapper {
+    text-align: left;
+  }
+
+  .main__title {
+    margin-top: 90px;
+    max-width: 635px;
+    height: 112px;
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  .main__text {
+    max-width: 445px;
+    height: 84px;
+    margin: 40px 0 40px 0;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .main__bottom-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .main__form {
+    position: relative;
+  }
+
+  .main__input {
+    width: 427px;
+    height: 56px;
+    margin: 0;  
+  }
+
+  .main__input-msg--active {
+    padding-left: 30px;
+    text-align: start;
+  }
+
+  .main__button {
+    margin: 0;
+    width: 162px;
+    height: 46px;
+    position: absolute;
+    top: 5px;
+    left: 259px;
+  }
+
+  .main__podcast-icons {
+    margin: 0;
+    width: 536px;
+    height: 29px;
+    margin-top: 60px;
+  }
+
+  .main__podcast-icon {
+    height: 29px;
+  }
+
+  .main__podcast-icon--google {
+    height: 18px;
+  }
+  
+  .main__podcast-icon--pocket {
+    height: 26px;
+  }
+
+  .pattern {
+    display: block;
+    padding: 150px 0 0 30px;
+  }  
+}
+
+
+@media all and (min-width: 1440px) {
+  .container {
+    background-image: url(assets/desktop/image-host.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: auto;
+    justify-content: center;
+    height: 828px;
+  }
+
+  .logo {
+    margin: -30px 0 95px 165px;
+  }
+
+  .main {
+    padding-left: 165px; 
+  }
+
+  .main__title {
+    max-width: 665px;
+    height: 124px;
+    font-size: 52px;
+    line-height: 62px;
+    margin-right: 58px;
+  }
+
+  .pattern {
+    padding: 0;
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+  }  
+}
+
+
+
+  
